@@ -3,6 +3,7 @@ package co.gdgbogota.simpletodo;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -27,6 +28,8 @@ public class MainActivity extends Activity {
         lvItems.setAdapter(itemsAdapter);
         items.add("First Item");
         items.add("Second Item");
+
+        setupListViewListener();
     }
 
     public void onAddItem(View v) {
@@ -35,4 +38,22 @@ public class MainActivity extends Activity {
         itemsAdapter.add(itemText);
         etNewItem.setText("");
     }
+
+    private void setupListViewListener() {
+        lvItems.setOnItemLongClickListener(
+                new AdapterView.OnItemLongClickListener() {
+                    @Override
+                    public boolean onItemLongClick(AdapterView<?> adapter,
+                                                   View item, int pos, long id) {
+                        // Remove the item within array at position
+                        items.remove(pos);
+                        // Refresh the adapter
+                        itemsAdapter.notifyDataSetChanged();
+                        // Return true consumes the long click event (marks it handled)
+                        return true;
+                    }
+
+                });
+    }
+
 }
