@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file:///Applications/XAMPP/xamppfiles/htdocs/SimpleTodo/SimpleTodo.iml" filepath="/Applications/XAMPP/xamppfiles/htdocs/SimpleTodo/SimpleTodo.iml" />
-      <module fileurl="file:///Applications/XAMPP/xamppfiles/htdocs/SimpleTodo/app/app.iml" filepath="/Applications/XAMPP/xamppfiles/htdocs/SimpleTodo/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleTodo.iml" filepath="$PROJECT_DIR$/SimpleTodo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
 </project>
